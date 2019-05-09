@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.HomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/song_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#ea7f25"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/image_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintTop_toBottomOf="@id/song_name"
+        android:layout_marginTop="40dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:id="@+id/play_progress"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        app:layout_constraintTop_toBottomOf="@id/image_recycler_view"
+        app:layout_constraintTop_toTopOf="@id/duration_text"
+        app:layout_constraintBottom_toBottomOf="@id/duration_text"
+        android:layout_marginEnd="80dp"
+        android:layout_marginStart="80dp"
+        android:background="#ACABAB"/>
+
+    <TextView
+        android:id="@+id/duration_text"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        app:layout_constraintTop_toBottomOf="@id/image_recycler_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"
+        android:textSize="14sp"
+        android:textColor="#ea7f25"
+        android:gravity="center"/>
+
+    <ImageButton
+        android:id="@+id/player_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toTopOf="@id/choose_linear_layout"
+        app:layout_constraintTop_toBottomOf="@id/duration_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/pose"
+        android:scaleType="fitXY" />
+
+    <ImageButton
+        android:id="@+id/collection_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@id/previous_btn"
+        app:layout_constraintEnd_toStartOf="@id/previous_btn"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/un_collection"
+        android:scaleType="fitXY"/>
+
+    <ImageButton
+        android:id="@+id/previous_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toTopOf="@id/player_btn"
+        app:layout_constraintEnd_toStartOf="@id/player_btn"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/previous"
+        android:scaleType="fitXY"/>
+
+    <ImageButton
+        android:id="@+id/next_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toTopOf="@id/player_btn"
+        app:layout_constraintStart_toEndOf="@id/player_btn"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/next"
+        android:scaleType="fitXY"/>
+
+    <ImageButton
+        android:id="@+id/voice_controller_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@id/next_btn"
+        app:layout_constraintStart_toEndOf="@id/next_btn"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/voice"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:id="@+id/choose_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/choose_img"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#ea7f25"
+            android:text="添加图片"
+            android:textColor="#ffff"
+            android:textSize="18sp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/choose_song"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#ea7f25"
+            android:text="添加歌曲"
+            android:textColor="#ffff"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
