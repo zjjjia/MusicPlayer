@@ -14,7 +14,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE song (id INTEGER PRIMARY KEY AUTOINCREMENT, imgPath TEXT, " +
-                "musicName TEXT , songPath TEXT, isCollection BOOLEAN)");
+                "musicName TEXT , musicPath TEXT, isCollection BOOLEAN)");
 
     }
 

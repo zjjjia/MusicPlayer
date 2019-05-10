@@ -91,23 +91,23 @@ public class HomeModel {
                 if (localMusicList.size() < cursor.getCount()) {          //选择的音乐比图片数量少
                     for (LocalMusic musicInfo : localMusicList) {
                         ContentValues values = new ContentValues();
-                        values.put("songName", musicInfo.getMusicName());
-                        values.put("songPath", musicInfo.getMusicPath());
+                        values.put("musicName", musicInfo.getMusicName());
+                        values.put("musicPath", musicInfo.getMusicPath());
                         String[] whereArgs = {String.valueOf(id++)};
                         db.update("song", values, "id=?", whereArgs);
                     }
                 } else if (localMusicList.size() > cursor.getCount()) {          //选择的音乐比图片数量多
                     for (int i = 0; i < cursor.getCount(); i++) {                    //先更新数据库
                         ContentValues values = new ContentValues();
-                        values.put("songName", localMusicList.get(i).getMusicName());
-                        values.put("songPath", localMusicList.get(i).getMusicPath());
+                        values.put("musicName", localMusicList.get(i).getMusicName());
+                        values.put("musicPath", localMusicList.get(i).getMusicPath());
                         String[] whereArgs = {String.valueOf(id++)};
                         db.update("song", values, "id=?", whereArgs);
                     }
                     for (int i = cursor.getCount(); i < localMusicList.size(); i++) {              //在插入数据库
                         ContentValues values = new ContentValues();
-                        values.put("songName", localMusicList.get(i).getMusicName());
-                        values.put("songPath", localMusicList.get(i).getMusicPath());
+                        values.put("musicName", localMusicList.get(i).getMusicName());
+                        values.put("musicPath", localMusicList.get(i).getMusicPath());
                         db.insert("song", null, values);
                     }
                 }
@@ -135,8 +135,8 @@ public class HomeModel {
                         MusicInfo musicInfo = new MusicInfo();
                         musicInfo.setId(cursor.getInt(cursor.getColumnIndex("id")));
                         musicInfo.setImgUrl(cursor.getString(cursor.getColumnIndex("imgPath")));
-                        musicInfo.setMusicName(cursor.getString(cursor.getColumnIndex("songName")));
-                        musicInfo.setMusicUrl(cursor.getString(cursor.getColumnIndex("songPath")));
+                        musicInfo.setMusicName(cursor.getString(cursor.getColumnIndex("musicName")));
+                        musicInfo.setMusicUrl(cursor.getString(cursor.getColumnIndex("musicPath")));
                         list.add(musicInfo);
                     }
                 }

@@ -84,6 +84,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         chooseImgBtn = findViewById(R.id.choose_img);
         chooseSongBtn = findViewById(R.id.choose_song);
 
+        playerBtn.setOnClickListener(this);
         chooseImgBtn.setOnClickListener(this);
         chooseSongBtn.setOnClickListener(this);
 
@@ -108,6 +109,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()){
+            case R.id.player_btn:
+                homePresenter.loadInfo();
+                break;
             case R.id.choose_img:
                 Log.d(TAG, "choose img");
                 ImageSelector.show(this, REQUEST_CODE_SELECT_IMG, MAX_SELECT_COUNT);
@@ -127,7 +131,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 return;
             }
             Log.d(TAG, "onActivityResult: " + imgPathList.toString());
-            homePresenter.insertImg(imgPathList);
+            homePresenter.saveImagePath(imgPathList);
         }
     }
 

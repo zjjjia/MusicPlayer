@@ -20,37 +20,40 @@ public class HomePresenter {
     private HomeModel homeModel;
     private IHomeView iHomeView;
 
-    public HomePresenter(Context context, IHomeView iHomeView){
+    public HomePresenter(Context context, IHomeView iHomeView) {
         this.mContext = context;
         homeModel = new HomeModel(mContext);
         this.iHomeView = iHomeView;
     }
 
-    public void insertImg(List<String> imgPathList){
-       homeModel.insertImgPath(imgPathList)
-               .subscribe(new Subscriber<String>() {
-                   @Override
-                   public void onCompleted() {
+    /**
+     * 存储图片信息
+     */
+    public void saveImagePath(List<String> imgPathList) {
+        homeModel.insertImgPath(imgPathList)
+                .subscribe(new Subscriber<String>() {
+                    @Override
+                    public void onCompleted() {
 
-                   }
+                    }
 
-                   @Override
-                   public void onError(Throwable e) {
-                       Log.e(TAG, "error: " + e);
-                       iHomeView.insertError(e.getMessage());
-                   }
+                    @Override
+                    public void onError(Throwable e) {
+                        Log.e(TAG, "error: " + e);
+                        iHomeView.insertError(e.getMessage());
+                    }
 
-                   @Override
-                   public void onNext(String s) {
-                       loadInfo();
-                   }
-               });
+                    @Override
+                    public void onNext(String s) {
+                        loadInfo();
+                    }
+                });
     }
 
-
-
-
-    public void loadInfo(){
+    /**
+     * 加载图片和音乐信息
+     */
+    public void loadInfo() {
         homeModel.loadSongInfo()
                 .subscribe(new Subscriber<List<MusicInfo>>() {
                     @Override
