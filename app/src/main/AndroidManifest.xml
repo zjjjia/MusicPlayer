@@ -19,6 +19,20 @@
         <activity
             android:name=".view.HomeActivity"
             android:label="[学号+姓名]">
+
+        </activity>
+        <activity
+            android:name=".view.RegisterActivity"
+            android:label="[学号+姓名]"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize">
+
+        </activity>
+        <activity
+            android:name=".view.LoginActivity"
+            android:label="[学号+姓名]"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -26,16 +40,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".view.RegisterActivity"
-            android:label="[学号+姓名]"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustResize"></activity>
-        <activity
-            android:name=".view.LoginActivity"
-            android:label="[学号+姓名]"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustResize"></activity>
     </application>
 
 </manifest>
