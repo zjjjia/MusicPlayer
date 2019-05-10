@@ -93,6 +93,7 @@ public class HomeModel {
                         ContentValues values = new ContentValues();
                         values.put("musicName", musicInfo.getMusicName());
                         values.put("musicPath", musicInfo.getMusicPath());
+                        values.put("isCollection", 0);
                         String[] whereArgs = {String.valueOf(id++)};
                         db.update("song", values, "id=?", whereArgs);
                     }
@@ -101,6 +102,7 @@ public class HomeModel {
                         ContentValues values = new ContentValues();
                         values.put("musicName", localMusicList.get(i).getMusicName());
                         values.put("musicPath", localMusicList.get(i).getMusicPath());
+                        values.put("isCollection", 0);
                         String[] whereArgs = {String.valueOf(id++)};
                         db.update("song", values, "id=?", whereArgs);
                     }
@@ -108,6 +110,7 @@ public class HomeModel {
                         ContentValues values = new ContentValues();
                         values.put("musicName", localMusicList.get(i).getMusicName());
                         values.put("musicPath", localMusicList.get(i).getMusicPath());
+                        values.put("isCollection", 0);
                         db.insert("song", null, values);
                     }
                 }
@@ -137,10 +140,43 @@ public class HomeModel {
                         musicInfo.setImgUrl(cursor.getString(cursor.getColumnIndex("imgPath")));
                         musicInfo.setMusicName(cursor.getString(cursor.getColumnIndex("musicName")));
                         musicInfo.setMusicUrl(cursor.getString(cursor.getColumnIndex("musicPath")));
+                        musicInfo.setIsCollection(cursor.getInt(cursor.getColumnIndex("isCollection")));
                         list.add(musicInfo);
                     }
                 }
                 subscriber.onNext(list);
+                subscriber.onCompleted();
+            }
+        })
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    public Observable<String> addCollection(final int id){
+        return Observable.create(new Observable.OnSubscribe<String>() {
+            @Override
+            public void call(Subscriber<? super String> subscriber) {
+                ContentValues values = new ContentValues();
+                values.put("isCollection", 1);
+                String[] whereArgs = {String.valueOf(id)};
+                db.update("song", values, "id=?", whereArgs);
+                subscriber.onNext(" ");
+                subscriber.onCompleted();
+            }
+        })
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    public Observable<String> cancelCollection(final int id){
+        return Observable.create(new Observable.OnSubscribe<String>() {
+            @Override
+            public void call(Subscriber<? super String> subscriber) {
+                ContentValues values = new ContentValues();
+                values.put("isCollection", 0);
+                String[] whereArgs = {String.valueOf(id)};
+                db.update("song", values, "id=?", whereArgs);
+                subscriber.onNext(" ");
                 subscriber.onCompleted();
             }
         })

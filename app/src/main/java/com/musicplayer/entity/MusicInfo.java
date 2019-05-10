@@ -7,7 +7,7 @@ public class MusicInfo {
     private String imgUrl;
     private String musicName;
     private String musicUrl;
-    private boolean isCollection;
+    private int isCollection;
 
     public int getId() {
         return id;
@@ -41,12 +41,12 @@ public class MusicInfo {
         this.musicUrl = songUrl;
     }
 
-    public boolean isCollection() {
+    public int getIsCollection() {
         return isCollection;
     }
 
-    public void setCollection(boolean collection) {
-        isCollection = collection;
+    public void setIsCollection(int isCollection) {
+        this.isCollection = isCollection;
     }
 
     @Override

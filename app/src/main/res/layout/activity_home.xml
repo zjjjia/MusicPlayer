@@ -6,14 +6,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.HomeActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </ScrollView>
-
     <TextView
-        android:id="@+id/song_name"
+        android:id="@+id/music_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,46 +18,64 @@
         android:textStyle="bold"
         android:textColor="#ea7f25"/>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/image_recycler_view"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/image_view_pager"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        app:layout_constraintTop_toBottomOf="@id/song_name"
+        app:layout_constraintTop_toBottomOf="@id/music_name"
         android:layout_marginTop="40dp">
 
-    </android.support.v7.widget.RecyclerView>
+    </android.support.v4.view.ViewPager>
 
-    <View
+    <TextView
+        android:id="@+id/first_time"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/image_view_pager"
+        android:text="00:00"
+        android:textSize="14sp"
+        android:textColor="#ea7f25"
+        android:gravity="center"/>
+
+    <SeekBar
         android:id="@+id/play_progress"
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        app:layout_constraintTop_toBottomOf="@id/image_recycler_view"
-        app:layout_constraintTop_toTopOf="@id/duration_text"
-        app:layout_constraintBottom_toBottomOf="@id/duration_text"
-        android:layout_marginEnd="80dp"
-        android:layout_marginStart="80dp"
+        android:layout_height="wrap_content"
+        android:maxHeight="3dp"
+        android:minHeight="3dp"
+        app:layout_constraintTop_toBottomOf="@id/image_view_pager"
+        app:layout_constraintTop_toTopOf="@id/end_time"
+        app:layout_constraintBottom_toBottomOf="@id/end_time"
+        android:backgroundTint="#00FFFFFF"
+        android:progressDrawable="@drawable/po_seek_bar"
+        android:layout_marginEnd="60dp"
+        android:layout_marginStart="60dp"
         android:background="#ACABAB"/>
 
     <TextView
-        android:id="@+id/duration_text"
+        android:id="@+id/end_time"
         android:layout_width="80dp"
         android:layout_height="25dp"
-        app:layout_constraintTop_toBottomOf="@id/image_recycler_view"
+        app:layout_constraintTop_toBottomOf="@id/image_view_pager"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:text="00:00"
         android:textSize="14sp"
         android:textColor="#ea7f25"
         android:gravity="center"/>
 
     <ImageButton
         android:id="@+id/player_btn"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toTopOf="@id/choose_linear_layout"
-        app:layout_constraintTop_toBottomOf="@id/duration_text"
+        app:layout_constraintTop_toBottomOf="@id/end_time"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/pose"
+        android:background="#00FFFFFF"
+        android:src="@drawable/pause"
         android:scaleType="fitXY" />
 
     <ImageButton
@@ -73,37 +85,30 @@
         app:layout_constraintBottom_toBottomOf="@id/previous_btn"
         app:layout_constraintEnd_toStartOf="@id/previous_btn"
         android:layout_marginEnd="30dp"
+        android:background="#00FFFFFF"
         android:src="@drawable/un_collection"
         android:scaleType="fitXY"/>
 
     <ImageButton
         android:id="@+id/previous_btn"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         app:layout_constraintTop_toTopOf="@id/player_btn"
         app:layout_constraintEnd_toStartOf="@id/player_btn"
         android:layout_marginEnd="10dp"
+        android:background="#00FFFFFF"
         android:src="@drawable/previous"
         android:scaleType="fitXY"/>
 
     <ImageButton
         android:id="@+id/next_btn"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         app:layout_constraintTop_toTopOf="@id/player_btn"
         app:layout_constraintStart_toEndOf="@id/player_btn"
         android:layout_marginStart="10dp"
+        android:background="#00FFFFFF"
         android:src="@drawable/next"
-        android:scaleType="fitXY"/>
-
-    <ImageButton
-        android:id="@+id/voice_controller_btn"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:layout_constraintBottom_toBottomOf="@id/next_btn"
-        app:layout_constraintStart_toEndOf="@id/next_btn"
-        android:layout_marginStart="30dp"
-        android:src="@drawable/voice"
         android:scaleType="fitXY"/>
 
     <LinearLayout
