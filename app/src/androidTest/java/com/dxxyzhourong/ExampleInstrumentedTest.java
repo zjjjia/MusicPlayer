@@ -1,4 +1,4 @@
-package com.musicplayer;
+package com.dxxyzhourong;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

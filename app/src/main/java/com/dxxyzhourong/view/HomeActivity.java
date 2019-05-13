@@ -1,4 +1,4 @@
-package com.musicplayer.view;
+package com.dxxyzhourong.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,11 +14,11 @@ import android.widget.Toast;
 
 import com.facebook.stetho.Stetho;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
-import com.musicplayer.R;
-import com.musicplayer.adapter.ViewPagerAdapter;
-import com.musicplayer.entity.MusicInfo;
-import com.musicplayer.presenter.HomePresenter;
-import com.musicplayer.presenter.iview.IHomeView;
+import com.dxxyzhourong.R;
+import com.dxxyzhourong.adapter.ViewPagerAdapter;
+import com.dxxyzhourong.entity.MusicInfo;
+import com.dxxyzhourong.presenter.HomePresenter;
+import com.dxxyzhourong.presenter.iview.IHomeView;
 import com.scrat.app.selectorlibrary.ImageSelector;
 
 import java.util.ArrayList;

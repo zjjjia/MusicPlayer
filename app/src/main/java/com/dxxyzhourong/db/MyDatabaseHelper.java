@@ -1,4 +1,4 @@
-package com.musicplayer.db;
+package com.dxxyzhourong.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

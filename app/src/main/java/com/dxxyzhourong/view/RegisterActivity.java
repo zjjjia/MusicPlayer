@@ -1,4 +1,4 @@
-package com.musicplayer.view;
+package com.dxxyzhourong.view;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.musicplayer.R;
+import com.dxxyzhourong.R;
 
 public class RegisterActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.musicplayer.entity;
+package com.dxxyzhourong.entity;
 
 public class LocalMusic {
 

@@ -1,7 +1,7 @@
-package com.musicplayer.presenter.iview;
+package com.dxxyzhourong.presenter.iview;
 
 
-import com.musicplayer.entity.MusicInfo;
+import com.dxxyzhourong.entity.MusicInfo;
 
 import java.util.List;
 

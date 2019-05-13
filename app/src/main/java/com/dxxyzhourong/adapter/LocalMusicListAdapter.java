@@ -1,4 +1,4 @@
-package com.musicplayer.adapter;
+package com.dxxyzhourong.adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -9,8 +9,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 
-import com.musicplayer.R;
-import com.musicplayer.entity.LocalMusic;
+import com.dxxyzhourong.R;
+import com.dxxyzhourong.entity.LocalMusic;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.musicplayer.view;
+package com.dxxyzhourong.view;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import com.facebook.stetho.Stetho;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
-import com.musicplayer.R;
+import com.dxxyzhourong.R;
 
 import okhttp3.OkHttpClient;
 

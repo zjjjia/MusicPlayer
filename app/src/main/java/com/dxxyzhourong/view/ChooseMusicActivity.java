@@ -1,22 +1,19 @@
-package com.musicplayer.view;
+package com.dxxyzhourong.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.musicplayer.R;
-import com.musicplayer.adapter.LocalMusicListAdapter;
-import com.musicplayer.entity.LocalMusic;
-import com.musicplayer.entity.MusicInfo;
-import com.musicplayer.presenter.ChooseMusicPresenter;
-import com.musicplayer.presenter.iview.IChooseMusicView;
+import com.dxxyzhourong.R;
+import com.dxxyzhourong.adapter.LocalMusicListAdapter;
+import com.dxxyzhourong.entity.LocalMusic;
+import com.dxxyzhourong.presenter.ChooseMusicPresenter;
+import com.dxxyzhourong.presenter.iview.IChooseMusicView;
 
-import java.lang.invoke.CallSite;
 import java.util.ArrayList;
 import java.util.List;
 

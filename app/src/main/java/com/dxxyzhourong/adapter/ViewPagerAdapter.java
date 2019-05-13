@@ -1,4 +1,4 @@
-package com.musicplayer.adapter;
+package com.dxxyzhourong.adapter;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.musicplayer.entity.MusicInfo;
+import com.dxxyzhourong.entity.MusicInfo;
 
 import java.util.ArrayList;
 import java.util.List;

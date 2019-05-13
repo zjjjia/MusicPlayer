@@ -1,4 +1,4 @@
-package com.musicplayer.model;
+package com.dxxyzhourong.model;
 
 
 import android.content.ContentValues;
@@ -7,9 +7,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.MediaStore;
 
-import com.musicplayer.db.MyDatabaseHelper;
-import com.musicplayer.entity.LocalMusic;
-import com.musicplayer.entity.MusicInfo;
+import com.dxxyzhourong.db.MyDatabaseHelper;
+import com.dxxyzhourong.entity.LocalMusic;
+import com.dxxyzhourong.entity.MusicInfo;
 
 import java.util.ArrayList;
 import java.util.List;

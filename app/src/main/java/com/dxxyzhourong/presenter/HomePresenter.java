@@ -1,20 +1,16 @@
-package com.musicplayer.presenter;
+package com.dxxyzhourong.presenter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.UiThread;
 import android.util.Log;
 
-import com.musicplayer.entity.MusicInfo;
-import com.musicplayer.model.HomeModel;
-import com.musicplayer.presenter.iview.IHomeView;
-import com.musicplayer.view.HomeActivity;
+import com.dxxyzhourong.entity.MusicInfo;
+import com.dxxyzhourong.model.HomeModel;
+import com.dxxyzhourong.presenter.iview.IHomeView;
 
 import java.io.IOException;
-import java.lang.annotation.Annotation;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;

@@ -1,11 +1,11 @@
-package com.musicplayer.presenter;
+package com.dxxyzhourong.presenter;
 
 import android.content.Context;
 import android.util.Log;
 
-import com.musicplayer.entity.LocalMusic;
-import com.musicplayer.model.HomeModel;
-import com.musicplayer.presenter.iview.IChooseMusicView;
+import com.dxxyzhourong.entity.LocalMusic;
+import com.dxxyzhourong.model.HomeModel;
+import com.dxxyzhourong.presenter.iview.IChooseMusicView;
 
 import java.util.List;
 

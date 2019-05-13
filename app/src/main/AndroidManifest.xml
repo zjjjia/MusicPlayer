@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.musicplayer">
+    package="com.dxxyzhourong">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -12,25 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".view.ChooseMusicActivity"
-            android:label="[学号+姓名]">
+            android:name="com.dxxyzhourong.view.ChooseMusicActivity"
+            android:label="201621112063周蓉">
 
         </activity>
         <activity
-            android:name=".view.HomeActivity"
-            android:label="[学号+姓名]">
+            android:name="com.dxxyzhourong.view.HomeActivity"
+            android:label="201621112063周蓉">
 
         </activity>
         <activity
-            android:name=".view.RegisterActivity"
-            android:label="[学号+姓名]"
+            android:name="com.dxxyzhourong.view.RegisterActivity"
+            android:label="201621112063周蓉"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustResize">
 
         </activity>
         <activity
-            android:name=".view.LoginActivity"
-            android:label="[学号+姓名]"
+            android:name="com.dxxyzhourong.view.LoginActivity"
+            android:label="201621112063周蓉"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
